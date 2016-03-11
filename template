@@ -1,0 +1,25 @@
+//Ordonarea elementelor pare la inceput si impare la sfarsit
+//by zeglIne
+#include <iostream>
+#include <fstream>
+using namespace std;
+ifstream fin("ord.in");
+ofstream fout("ord.out");
+int v[1000],n;
+int main()
+{
+    fin>>n; unsigned i;
+    for(i=1;i<=n;i++)
+        fin>>v[i];
+
+
+
+
+
+
+
+
+    for(i=1;i<=n;i++)
+        fout>>v[i];
+    return 0;
+}
