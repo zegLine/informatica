@@ -1,0 +1,38 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+ifstream fin("triunghi.in");
+ofstream fout("triunghi.out");
+int i,j,a[10][10],c,x,n=5;
+int main()
+{
+
+    a[1][1]=45;
+    a[2][2]=25;
+    a[3][3]=13;
+    a[4][2]=5;
+    a[5][4]=4;
+
+    c=2;
+
+   while (c<=n) { for(i=1;i<=c-1;i++)
+    x=i-1;
+        j=-1;
+        while(j==-1){
+
+            if(a[c-1][x]!=0) j=1; else
+            x++;
+        }
+        if(a[c][i-1]==0) a[c][i]=a[c-1][x]-a[c][i-1]; else a[c][i]=a[c-1][x]-a[c][i+1];
+
+
+       c++;
+    }
+
+     for(i=1;i<=10;i++)
+     {for(j=1;j<=10;j++)
+     cout<<a[i][j]<<" "; cout<<endl;
+     }
+    return 0;
+
+}
