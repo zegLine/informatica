@@ -1,4 +1,4 @@
-//Ordonarea elementelor pare la inceput si impare la sfarsit
+//
 //by zeglIne
 #include <iostream>
 #include <fstream>
@@ -20,6 +20,6 @@ int main()
 
 
     for(i=1;i<=n;i++)
-        fout>>v[i];
+        fout<<v[i];
     return 0;
 }
