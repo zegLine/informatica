@@ -1,0 +1,37 @@
+//PRINCIPIUL CUTIEI
+//by zeglIne
+#include <iostream>
+#include <fstream>
+using namespace std;
+ifstream fin("cutie.in");
+ofstream fout("cutie.out");
+int swag[1000],j,v[1000],s[1000],n,x,r,c;
+int main()
+{
+    fin>>n; unsigned i;
+    for(i=1;i<=n;i++)
+        fin>>v[i];
+    fin>>x;
+i=1; j=1;
+    for (i=1;i<=n;i++)
+        for(j=1;j<=i;j++) s[i]+=v[j];
+
+      for(i=1;i<=n;i++)
+    if (s[i]%x==0) fout<<s[i];
+
+    for (i=1;i<=n;i++)
+        swag[i]=s[i]%x;
+
+   for(i=1;i<=n;i++)
+      for(j=1;j<=n;j++)
+       if(swag[i]==swag[j]) cout<<s[j]<<" ";
+
+
+
+
+
+
+
+
+    return 0;
+}
